@@ -1,0 +1,11 @@
+{
+  "name": "rtl-doctor",
+  "version": "0.1.0",
+  "description": "Finds CSS, Tailwind and JSX code that breaks when a page is switched to Arabic (RTL), and fixes the safe cases",
+  "bin": { "rtl-doctor": "bin/rtl-doctor.js" },
+  "main": "src/scanner.js",
+  "scripts": { "test": "node --test" },
+  "keywords": ["rtl", "arabic", "i18n", "css", "tailwind", "logical-properties", "lint"],
+  "license": "MIT",
+  "engines": { "node": ">=18" }
+}
