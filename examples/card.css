@@ -1,0 +1,21 @@
+.card {
+  margin-left: 16px;
+  padding: 8px 12px 8px 24px;
+  border-left: 4px solid teal;
+  text-align: left;
+  border-top-left-radius: 8px;
+}
+
+.card .close {
+  position: absolute;
+  right: 8px;
+  float: right;
+}
+
+.card code {
+  direction: ltr; /* rtl-ignore */
+}
+
+.btn {
+  @apply pl-4 text-left;
+}
