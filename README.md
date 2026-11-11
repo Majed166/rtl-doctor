@@ -89,7 +89,7 @@ as a Stylelint plugin. rtl-doctor needs no setup and also covers Tailwind classe
 ## Development
 
 ```
-npm test                              # 14 tests, no install needed
+npm test                              # 15 tests, no install needed
 node bin/rtl-doctor.js examples       # try it on the sample files
 ```
 

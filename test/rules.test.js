@@ -93,3 +93,8 @@ test('icons: reported once, not for keyboard keys or direction-aware code', () =
   assert.deepStrictEqual(check('a.jsx', "if (e.key === 'ArrowLeft') go();").rules, []);
   assert.deepStrictEqual(check('a.jsx', 'const Icon = isRtl ? ChevronLeft : ChevronRight;').rules, []);
 });
+
+test('css: shorthand rule does not read past the end of the declaration', () => {
+  assert.deepStrictEqual(check('a.css', 'h1 { margin: 0; font-size: 2rem; }\n.a { padding: 7px 6px; border: 1px solid red; }').rules, []);
+  assert.deepStrictEqual(check('a.css', '.a { margin: 0 4px 0 8px }').rules, ['css/shorthand-sides']);
+});

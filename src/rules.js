@@ -52,7 +52,7 @@ const cssRules = [
     id: 'css/shorthand-sides',
     level: 'warn',
     // margin: top right bottom left  -> problem only if right != left
-    re: /(^|[{;\s])(margin|padding)\s*:\s*(\S+)\s+(\S+)\s+(\S+)\s+([^\s;]+)\s*;?/g,
+    re: /(^|[{;\s])(margin|padding)\s*:\s*([^\s;:{}]+)\s+([^\s;:{}]+)\s+([^\s;:{}]+)\s+([^\s;:{}]+)\s*(?=[;}]|$)/g,
     when: (m) => m[4] !== m[6],
     msg: (m) => `${m[2]} shorthand has different right (${m[4]}) and left (${m[6]}) values, they will not swap in RTL. Split it and use ${m[2]}-inline-start / ${m[2]}-inline-end`,
   },
